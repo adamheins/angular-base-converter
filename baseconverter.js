@@ -14,25 +14,8 @@ app.controller('controller', ['$scope', function($scope) {
     // result of the conversion of the first number to this new base.
     $scope.second = new NumberWithBase('', '');
 
-    /**
-     * A flag indicating that one or more of the characters in the number is larger than it's
-     * base permits. For example, if the value is "aaa" but the base is 10, the flag is set to true
-     * and conversion does not occur.
-     *
-     * @param {NumberWithBase} numberWithBase The NumberWithBase to check for invalid digits.
-     *
-     * @return {boolean} True if numberWithBase's number component contains invalid characters,
-     *     false otherwise.
-     */
-    $scope.incompatible = function(numberWithBase) {
-        if (numberWithBase.base < 2)
-            return false;
-        for (var i = 0; i < numberWithBase.number.length; i++) {
-            if (charToInt(numberWithBase.number.charAt(i)) >= numberWithBase.base)
-                return true;
-        }
-        return false;
-    };
+    // Tests for digits too large for their base.
+    $scope.incompatible = invalidDigit;
 }]);
 
 
@@ -105,6 +88,27 @@ app.directive('input', function() {
 
 
 /**
+ * Indicates whether or not one or more of the characters in the number is larger than it's
+ * base permits. For example, if the value is "aaa" but the base is 10, the flag is set to true
+ * and conversion does not occur.
+ *
+ * @param {NumberWithBase} numberWithBase The NumberWithBase to check for invalid digits.
+ *
+ * @return {boolean} True if numberWithBase's number component contains invalid characters,
+ *     false otherwise.
+ */
+function invalidDigit(numberWithBase) {
+    if (numberWithBase.base < 2)
+        return false;
+    for (var i = 0; i < numberWithBase.number.length; i++) {
+        if (charToInt(numberWithBase.number.charAt(i)) >= numberWithBase.base)
+            return true;
+    }
+    return false;
+}
+
+
+/**
  * Converts an alphanumeric character to an integer. Digits have the same value as a character.
  * Letters are converted to their index in the alphabet (starting with A = 0) plus 10. So A = 10,
  * B = 11, etc. No distinction is made between upper and lowercase characters.
@@ -155,7 +159,7 @@ function NumberWithBase(number, base) {
  */
 NumberWithBase.prototype.convert = function(other) {
 
-    if (this.base < 2 || other.base < 2)
+    if (this.base < 2 || other.base < 2 || invalidDigit(other))
         return;
 
     // Fractional precision is set at 8 places after the radix point. Does not apply to integers.
