@@ -1,55 +1,53 @@
 body {
   background: #f6f6f6;
-  font-family: 'Open Sans', sans-serif !important;
-  -webkit-font-smoothing: antialiased !important;
-  font-weight: 300;
   color: #666;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
 }
 
 input {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  border-radius: 4px;
   border: 1px solid #aaa;
-  color: #333;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 input:focus {
   border-color: #428bca;
-  outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  outline: 0;
 }
 
 p {
-  margin-top: 5px;
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .base {
   font-size: 100%;
+  margin-bottom: 10px;
   padding: 5px;
   vertical-align: bottom;
   width: 40px;
-  margin-bottom: 10px;
 }
 
 .value {
   font-size: 150%;
-  padding: 5px;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .panel {
-  text-align: left;
-  display: inline-block;
-  margin-top: 20px;
+  background-color: #fff;
   border: 1px solid #aaa;
   border-radius: 4px;
-  padding: 20px;
-  background-color: #fff;
   box-shadow:0 0 8px 0 rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
 }
 
 .title {

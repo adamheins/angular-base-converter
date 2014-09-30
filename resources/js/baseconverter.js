@@ -159,7 +159,7 @@ function NumberWithBase(number, base) {
  */
 NumberWithBase.prototype.convert = function(other) {
 
-    if (this.base < 2 || other.base < 2 || invalidDigit(other))
+    if (this.base < 2 || other.base < 2 || invalidDigit(other) || other.number.length === 0)
         return;
 
     // Fractional precision is set at 8 places after the radix point. Does not apply to integers.
