@@ -1,0 +1,101 @@
+/**
+ * Base-to-Base Converter custom css.
+ * Adam Heins
+ * 2014-07-05
+ */
+
+@import "bootstrap.min.css";
+
+body {
+    background: #ddd;
+}
+
+body .container {
+    padding: 0px;
+    margin: auto;
+}
+
+.jumbotron {
+    font-size: large;
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+}
+
+.jumbotron h1 {
+    color: #428bca;
+}
+		
+.form-horizontal .control-label {
+    padding-top: 0px;
+}
+
+.num-box {
+    width: 100%;
+    text-align: right;
+}
+
+@media (min-width: 768px){
+    .num-box {
+        width: 46%;
+    }
+}
+
+@media (min-width: 878px){
+    .container {
+        width: 878px;
+    }
+}
+
+@media (max-width: 878px){
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-height: 775px){
+    .jumbotron {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-height: 776px){
+    .jumbotron {
+        margin: 0px;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.signature {
+    text-align: right;
+    font-size: 60%;
+    color: #aaa;
+}
+
+.error {
+    background-color: #f2dede;
+}
+
+.small-break {
+    margin-top: 30px;
+}
+
+#big-equal {
+    font-size: 300%;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    width: 8%;
+}
+
+#num2 {
+    background: white;
+}

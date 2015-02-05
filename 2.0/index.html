@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Base Converter</title>
+
+    <!-- icon -->
+    <link rel="icon" href="resources/ico/abcicon.png">
+
+    <!-- Open Sans font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet'>
+
+    <!-- custom style -->
+    <link href="resources/css/baseconverter.css" rel="stylesheet">
+
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+    <!-- custom script -->
+    <script src="resources/js/baseconverter.js"></script>
+
+  </head>
+  <body>
+    <div ng-app="base-converter" ng-controller='controller' style="text-align: center">
+      <div class="panel">
+        <div class="title">Base Converter</div>
+        <p>Converts a number from one base to another.</p>
+        <form>
+          <input type="float" id="number1" class="value" placeholder="Original number"
+            title="Put the number you want to convert here." ng-class="{error: incompatible(first)}"
+            ng-model="first.number" ng-change="second.convert(first)">
+          <input type="base" id="base1" class="base" placeholder="Base"
+            title="Put the base of the number being converted here." ng-model="first.base"
+            ng-change="second.convert(first)">
+        </form>
+        <form>
+          <input id='number2' class="value" placeholder="Converted number" readonly
+            title="The converted number appears here." ng-model="second.number">
+          <input type="base" id='base2' class="base" placeholder="Base"
+            title="Put the base of the converted number here." ng-model="second.base"
+            ng-change="second.convert(first)" >
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
