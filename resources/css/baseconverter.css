@@ -3,7 +3,9 @@ body {
   color: #666;
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300;
+  text-align: center;
 }
+
 
 input {
   border: 1px solid #aaa;
@@ -15,9 +17,19 @@ input {
 }
 
 input:focus {
-  border-color: #428bca;
+  border-color: #39b1a4;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   outline: 0;
+}
+
+a {
+  color: #39b1a4;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: #48e5d4 !important;
 }
 
 p {
@@ -45,10 +57,11 @@ p {
   border-radius: 4px;
   box-shadow:0 0 8px 0 rgba(0, 0, 0, 0.5);
   display: inline-block;
-  margin-top: 20px;
+  margin: 20px;
   padding: 20px;
   text-align: left;
 }
+
 
 .title {
   font-size: 2.5rem;
@@ -57,4 +70,25 @@ p {
 
 .error {
   background-color: #ffeded;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.footer .copyright {
+  margin-bottom: 12px;
+  margin-top: 12px;
 }

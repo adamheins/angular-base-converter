@@ -21,7 +21,7 @@
 
   </head>
   <body>
-    <div ng-app="base-converter" ng-controller='controller' style="text-align: center">
+    <div ng-app="base-converter" ng-controller='controller'>
       <div class="panel">
         <div class="title">Base Converter</div>
         <p>Converts a number from one base to another.</p>
@@ -40,6 +40,11 @@
             title="Put the base of the converted number here." ng-model="second.base"
             ng-change="second.convert(first)" >
         </form>
+      </div>
+      <div class="footer">
+        <p class="copyright">Adam Heins &copy; 2015</p>
+        <p>This website is open source. View the source <a href="https://github.com/adamheins/base-converter">here</a>.</p>
+        <p>If you've found this website useful, feel free to <a>donate</a>.</p>
       </div>
     </div>
   </body>
