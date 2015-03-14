@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2015 Adam Heins
+ *
+ * This file is part of the Base Converter project, which is distributed under the MIT
+ * license. For the full terms, see the included LICENSE file.
+ */
+
+
 // Test decimal to binary with integers.
 (function() {
     var test = new NumberWithBase(null, 2);
