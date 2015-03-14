@@ -26,29 +26,31 @@
   </head>
   <body>
     <div ng-app="base-converter" ng-controller='controller'>
-      <div class="panel">
-        <div class="title">Base Converter</div>
-        <p>Converts a number from one base to another.</p>
-        <form>
-          <input type="float" id="number1" class="value" placeholder="Original number"
-            title="Put the number you want to convert here." ng-class="{error: incompatible(first)}"
-            ng-model="first.number" ng-change="second.convert(first)">
-          <input type="base" id="base1" class="base" placeholder="Base"
-            title="Put the base of the number being converted here." ng-model="first.base"
-            ng-change="second.convert(first)">
-        </form>
-        <form>
-          <input id='number2' class="value" placeholder="Converted number" readonly
-            title="The converted number appears here." ng-model="second.number">
-          <input type="base" id='base2' class="base" placeholder="Base"
-            title="Put the base of the converted number here." ng-model="second.base"
-            ng-change="second.convert(first)" >
-        </form>
-      </div>
-      <div class="footer">
-        <p class="copyright">Adam Heins &copy; 2015</p>
-        <p>This website is open source. View the source <a href="https://github.com/adamheins/base-converter">here</a>.</p>
-        <p>If you've found this website useful, feel free to <a>donate</a>.</p>
+      <div class="container">
+        <div class="panel">
+          <div class="title">Base Converter</div>
+          <p>Converts a number from one base to another.</p>
+          <form>
+            <input type="float" id="number1" class="value" placeholder="Original Number"
+              title="Put the number you want to convert here." ng-class="{error: incompatible(first)}"
+              ng-model="first.number" ng-change="second.convert(first)">
+            <input type="base" id="base1" class="base" placeholder="Base"
+              title="Put the base of the number being converted here." ng-model="first.base"
+              ng-change="second.convert(first)">
+          </form>
+          <form>
+            <input id='number2' class="value" placeholder="Converted Number" readonly
+              title="The converted number appears here." ng-model="second.number">
+            <input type="base" id='base2' class="base" placeholder="Base"
+              title="Put the base of the converted number here." ng-model="second.base"
+              ng-change="second.convert(first)" >
+          </form>
+        </div>
+        <div class="footer">
+          <p class="copyright">Adam Heins &copy; 2015</p>
+          <p>This website is open source. View the source <a href="https://github.com/adamheins/base-converter">here</a>.</p>
+          <p>If you've found this website useful, feel free to <a>donate</a>.</p>
+        </div>
       </div>
     </div>
   </body>

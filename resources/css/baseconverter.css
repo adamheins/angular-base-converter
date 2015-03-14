@@ -1,3 +1,12 @@
+html, body, .ng-scope {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+
 body {
   background: #f6f6f6;
   color: #666;
@@ -7,6 +16,29 @@ body {
   text-align: center;
 }
 
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 9rem;
+  width: 460px;
+}
+
+@media (max-width: 460px) {
+  html { font-size: 13px; }
+  .container { width: 370px; }
+}
+
+@media (max-width: 370px) {
+  html { font-size: 11px; }
+  .container { width: 315px; }
+}
+
+@media (max-width: 315px) {
+  html { font-size: 10px; }
+  .container { width: 280px; }
+}
 
 input {
   border: 1px solid #aaa;
@@ -61,15 +93,8 @@ p {
   margin: 1rem;
   padding: 1.35rem;
   text-align: left;
-  width: 24rem;
 }
-/*
-@media(max-width: 400px) {
-  .panel {
-    width: 90%;
-  }
-}
-*/
+
 .title {
   font-size: 2.5rem;
   font-weight: 400;
